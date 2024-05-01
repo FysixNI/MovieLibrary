@@ -1,4 +1,5 @@
-public enum Genre {
+public enum Genre
+{
     COMEDY,
     THRILLER,
     HORROR,

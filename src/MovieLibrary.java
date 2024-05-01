@@ -1,38 +1,30 @@
 import java.util.ArrayList;
-public class MovieLibrary {
-
+public class MovieLibrary
+{
     private ArrayList<Movie> movies;
 
-    public MovieLibrary() {
-
+    public MovieLibrary()
+    {
         movies = new ArrayList<Movie>();
-
     }
 
-    public void addMovie (Movie m){
-
+    public void addMovie (Movie m)
+    {
         this.movies.add(m);
     }
 
-    public void showMovies(){
-
-        for(Movie m : this.movies){
-
+    public void showMovies()
+    {
+        for(Movie m : this.movies)
+        {
             m.showInfo();
-
         }
     }
-
-    public int movieCount(){
-
+    public int movieCount()
+    {
         int count = this.movies.size();
 
         return count;
     }
-
-
-
-
-
 
 }

@@ -1,24 +1,16 @@
 import java.util.Scanner;
 
-public class InputReader {
-
+public class InputReader
+{
     private Scanner scanner;
 
-    public InputReader(){
-
+    public InputReader()
+    {
         this.scanner = new Scanner(System.in);
-
     }
 
-    public String getInput() {
-
+    public String getInput()
+    {
         return this.scanner.nextLine();
-
     }
-
-
-
-
-
-
 }

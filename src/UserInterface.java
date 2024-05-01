@@ -1,21 +1,24 @@
-public class UserInterface {
+public class UserInterface
+{
 
     private InputReader reader;
 
     private MovieLibrary library;
 
-    public UserInterface() {
+    public UserInterface()
+    {
 
         this.reader = new InputReader();
 
     }
 
-    public void showMainMenu() {
+    public void showMainMenu()
+    {
 
         boolean quit = false;
 
-        while (quit = false) {
-
+        while (quit = false)
+        {
             System.out.println("Please select an option: ");
             System.out.println("1. add a new movie");
             System.out.println("2. show all movies");
@@ -24,7 +27,8 @@ public class UserInterface {
 
             String userInput = reader.getInput();
 
-            switch (userInput) {
+            switch (userInput)
+            {
 
                 case "1":
                     this.addMovie();
@@ -47,7 +51,8 @@ public class UserInterface {
 
     }
 
-    public void addMovie() {
+    public void addMovie()
+    {
 
         System.out.println("Please enter the title of the movie: ");
         String title = reader.getInput();
@@ -58,12 +63,14 @@ public class UserInterface {
 
 
 
-        try {
+        try
+        {
 
             runningTime = Integer.parseInt(userInput);
 
         }
-        catch (NumberFormatException exception) {
+        catch (NumberFormatException exception)
+        {
 
             System.err.println("The input could not be parsed to an int.");
             return;
@@ -84,19 +91,22 @@ public class UserInterface {
 
         int genreNumber = -1;
 
-        try {
+        try
+        {
 
             genreNumber = Integer.parseInt(userInput);
 
         }
-        catch (NumberFormatException exception) {
+        catch (NumberFormatException exception)
+        {
 
             System.err.println("The input could not be parsed to an int.");
             return;
 
         }
 
-        if( genreNumber < 1 || genreNumber > 6) {
+        if( genreNumber < 1 || genreNumber > 6)
+        {
 
             System.err.println("That was not a valid option.");
             return;
@@ -105,7 +115,8 @@ public class UserInterface {
 
         Genre genre = Genre.COMEDY;
 
-        switch (genreNumber) {
+        switch (genreNumber)
+        {
 
             case 1:
                 genre = Genre.COMEDY;
@@ -134,22 +145,24 @@ public class UserInterface {
         Movie m = new Movie(title, runningTime, genre);
         this.library.addMovie(m);
 
-
     }
 
-    public void listMovies() {
+    public void listMovies()
+    {
 
         this.library.showMovies();
 
     }
 
-    public void showMovieCount() {
+    public void showMovieCount()
+    {
 
         int count = this.library.movieCount();
 
         System.out.println(count);
 
     }
+
 
 
 
